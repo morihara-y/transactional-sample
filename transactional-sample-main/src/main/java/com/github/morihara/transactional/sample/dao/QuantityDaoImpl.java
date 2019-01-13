@@ -22,16 +22,19 @@ public class QuantityDaoImpl implements QuantityDao {
                 .quantityCode(rs.getString("quantity")).build();
     };
 
+    @Override
     public void insert(QuantityTrnDto dto) {
         jdbc.update("insert into quantity_trn (quantity_code, quantity) values (?, ?)",
                 dto.getQuantityCode(), dto.getQuantity());
     }
 
+    @Override
     public void update(QuantityTrnDto dto) {
         jdbc.update("update quantity_trn set quantity = ? where quantity_code = ?",
                 dto.getQuantity(), dto.getQuantityCode());
     }
 
+    @Override
     public Optional<QuantityTrnDto> getQuantity(String quantityCode) {
         String sql = "select quantity_code, quantity from quantity_trn where quantity_code = ?";
         PreparedStatementSetter pss = new PreparedStatementSetter() {
