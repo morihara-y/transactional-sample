@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
+  <classpathentry kind="src" path="src/main/resources" excluding="**/*.java"/>
+  <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="var" path="M2_REPO/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar" sourcepath="M2_REPO/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/boot/spring-boot-starter/2.0.8.RELEASE/spring-boot-starter-2.0.8.RELEASE.jar" sourcepath="M2_REPO/org/springframework/boot/spring-boot-starter/2.0.8.RELEASE/spring-boot-starter-2.0.8.RELEASE-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/boot/spring-boot/2.0.8.RELEASE/spring-boot-2.0.8.RELEASE.jar" sourcepath="M2_REPO/org/springframework/boot/spring-boot/2.0.8.RELEASE/spring-boot-2.0.8.RELEASE-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/springframework/boot/spring-boot/2.0.8.RELEASE/spring-boot-2.0.8.RELEASE-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-core/5.0.12.RELEASE/spring-core-5.0.12.RELEASE.jar" sourcepath="M2_REPO/org/springframework/spring-core/5.0.12.RELEASE/spring-core-5.0.12.RELEASE-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/springframework/spring-core/5.0.12.RELEASE/spring-core-5.0.12.RELEASE-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-jcl/5.0.12.RELEASE/spring-jcl-5.0.12.RELEASE.jar" sourcepath="M2_REPO/org/springframework/spring-jcl/5.0.12.RELEASE/spring-jcl-5.0.12.RELEASE-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/springframework/spring-jcl/5.0.12.RELEASE/spring-jcl-5.0.12.RELEASE-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-context/5.0.12.RELEASE/spring-context-5.0.12.RELEASE.jar" sourcepath="M2_REPO/org/springframework/spring-context/5.0.12.RELEASE/spring-context-5.0.12.RELEASE-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/springframework/spring-context/5.0.12.RELEASE/spring-context-5.0.12.RELEASE-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-aop/5.0.12.RELEASE/spring-aop-5.0.12.RELEASE.jar" sourcepath="M2_REPO/org/springframework/spring-aop/5.0.12.RELEASE/spring-aop-5.0.12.RELEASE-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/springframework/spring-aop/5.0.12.RELEASE/spring-aop-5.0.12.RELEASE-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-beans/5.0.12.RELEASE/spring-beans-5.0.12.RELEASE.jar" sourcepath="M2_REPO/org/springframework/spring-beans/5.0.12.RELEASE/spring-beans-5.0.12.RELEASE-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/springframework/spring-beans/5.0.12.RELEASE/spring-beans-5.0.12.RELEASE-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-expression/5.0.12.RELEASE/spring-expression-5.0.12.RELEASE.jar" sourcepath="M2_REPO/org/springframework/spring-expression/5.0.12.RELEASE/spring-expression-5.0.12.RELEASE-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/springframework/spring-expression/5.0.12.RELEASE/spring-expression-5.0.12.RELEASE-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/boot/spring-boot-autoconfigure/2.0.8.RELEASE/spring-boot-autoconfigure-2.0.8.RELEASE.jar" sourcepath="M2_REPO/org/springframework/boot/spring-boot-autoconfigure/2.0.8.RELEASE/spring-boot-autoconfigure-2.0.8.RELEASE-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.8.RELEASE/spring-boot-autoconfigure-2.0.8.RELEASE-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/boot/spring-boot-starter-logging/2.0.8.RELEASE/spring-boot-starter-logging-2.0.8.RELEASE.jar" sourcepath="M2_REPO/org/springframework/boot/spring-boot-starter-logging/2.0.8.RELEASE/spring-boot-starter-logging-2.0.8.RELEASE-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar" sourcepath="M2_REPO/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar" sourcepath="M2_REPO/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.7.13/slf4j-api-1.7.13.jar" sourcepath="M2_REPO/org/slf4j/slf4j-api/1.7.13/slf4j-api-1.7.13-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/slf4j/slf4j-api/1.7.13/slf4j-api-1.7.13-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/apache/logging/log4j/log4j-to-slf4j/2.10.0/log4j-to-slf4j-2.10.0.jar" sourcepath="M2_REPO/org/apache/logging/log4j/log4j-to-slf4j/2.10.0/log4j-to-slf4j-2.10.0-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.10.0/log4j-to-slf4j-2.10.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0.jar" sourcepath="M2_REPO/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.jar" sourcepath="M2_REPO/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/yaml/snakeyaml/1.19/snakeyaml-1.19.jar" sourcepath="M2_REPO/org/yaml/snakeyaml/1.19/snakeyaml-1.19-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/yaml/snakeyaml/1.19/snakeyaml-1.19-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/boot/spring-boot-starter-jdbc/2.0.8.RELEASE/spring-boot-starter-jdbc-2.0.8.RELEASE.jar" sourcepath="M2_REPO/org/springframework/boot/spring-boot-starter-jdbc/2.0.8.RELEASE/spring-boot-starter-jdbc-2.0.8.RELEASE-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/zaxxer/HikariCP/2.7.9/HikariCP-2.7.9.jar" sourcepath="M2_REPO/com/zaxxer/HikariCP/2.7.9/HikariCP-2.7.9-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/com/zaxxer/HikariCP/2.7.9/HikariCP-2.7.9-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-jdbc/5.0.12.RELEASE/spring-jdbc-5.0.12.RELEASE.jar" sourcepath="M2_REPO/org/springframework/spring-jdbc/5.0.12.RELEASE/spring-jdbc-5.0.12.RELEASE-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/springframework/spring-jdbc/5.0.12.RELEASE/spring-jdbc-5.0.12.RELEASE-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-tx/5.0.12.RELEASE/spring-tx-5.0.12.RELEASE.jar" sourcepath="M2_REPO/org/springframework/spring-tx/5.0.12.RELEASE/spring-tx-5.0.12.RELEASE-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/springframework/spring-tx/5.0.12.RELEASE/spring-tx-5.0.12.RELEASE-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/mysql/mysql-connector-java/5.1.47/mysql-connector-java-5.1.47.jar" sourcepath="M2_REPO/mysql/mysql-connector-java/5.1.47/mysql-connector-java-5.1.47-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar" sourcepath="M2_REPO/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar" sourcepath="M2_REPO/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/projectlombok/lombok/1.16.22/lombok-1.16.22.jar" sourcepath="M2_REPO/org/projectlombok/lombok/1.16.22/lombok-1.16.22-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/projectlombok/lombok/1.16.22/lombok-1.16.22-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/boot/spring-boot-devtools/2.0.8.RELEASE/spring-boot-devtools-2.0.8.RELEASE.jar" sourcepath="M2_REPO/org/springframework/boot/spring-boot-devtools/2.0.8.RELEASE/spring-boot-devtools-2.0.8.RELEASE-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/springframework/boot/spring-boot-devtools/2.0.8.RELEASE/spring-boot-devtools-2.0.8.RELEASE-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-collections4/4.1/commons-collections4-4.1.jar" sourcepath="M2_REPO/org/apache/commons/commons-collections4/4.1/commons-collections4-4.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/apache/commons/commons-collections4/4.1/commons-collections4-4.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/boot/spring-boot-starter-test/2.0.8.RELEASE/spring-boot-starter-test-2.0.8.RELEASE.jar" sourcepath="M2_REPO/org/springframework/boot/spring-boot-starter-test/2.0.8.RELEASE/spring-boot-starter-test-2.0.8.RELEASE-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/boot/spring-boot-test/2.0.8.RELEASE/spring-boot-test-2.0.8.RELEASE.jar" sourcepath="M2_REPO/org/springframework/boot/spring-boot-test/2.0.8.RELEASE/spring-boot-test-2.0.8.RELEASE-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/springframework/boot/spring-boot-test/2.0.8.RELEASE/spring-boot-test-2.0.8.RELEASE-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/boot/spring-boot-test-autoconfigure/2.0.8.RELEASE/spring-boot-test-autoconfigure-2.0.8.RELEASE.jar" sourcepath="M2_REPO/org/springframework/boot/spring-boot-test-autoconfigure/2.0.8.RELEASE/spring-boot-test-autoconfigure-2.0.8.RELEASE-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/2.0.8.RELEASE/spring-boot-test-autoconfigure-2.0.8.RELEASE-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar" sourcepath="M2_REPO/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/net/minidev/json-smart/2.3/json-smart-2.3.jar" sourcepath="M2_REPO/net/minidev/json-smart/2.3/json-smart-2.3-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar" sourcepath="M2_REPO/net/minidev/accessors-smart/1.2/accessors-smart-1.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/net/minidev/accessors-smart/1.2/accessors-smart-1.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar" sourcepath="M2_REPO/org/ow2/asm/asm/5.0.4/asm-5.0.4-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/junit/junit/4.12/junit-4.12.jar" sourcepath="M2_REPO/junit/junit/4.12/junit-4.12-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/junit/junit/4.12/junit-4.12-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar" sourcepath="M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/assertj/assertj-core/3.9.1/assertj-core-3.9.1.jar" sourcepath="M2_REPO/org/assertj/assertj-core/3.9.1/assertj-core-3.9.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/assertj/assertj-core/3.9.1/assertj-core-3.9.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/mockito/mockito-core/2.15.0/mockito-core-2.15.0.jar" sourcepath="M2_REPO/org/mockito/mockito-core/2.15.0/mockito-core-2.15.0-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/mockito/mockito-core/2.15.0/mockito-core-2.15.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/net/bytebuddy/byte-buddy/1.7.11/byte-buddy-1.7.11.jar" sourcepath="M2_REPO/net/bytebuddy/byte-buddy/1.7.11/byte-buddy-1.7.11-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/net/bytebuddy/byte-buddy/1.7.11/byte-buddy-1.7.11-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/net/bytebuddy/byte-buddy-agent/1.7.11/byte-buddy-agent-1.7.11.jar" sourcepath="M2_REPO/net/bytebuddy/byte-buddy-agent/1.7.11/byte-buddy-agent-1.7.11-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/net/bytebuddy/byte-buddy-agent/1.7.11/byte-buddy-agent-1.7.11-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/objenesis/objenesis/2.6/objenesis-2.6.jar" sourcepath="M2_REPO/org/objenesis/objenesis/2.6/objenesis-2.6-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/objenesis/objenesis/2.6/objenesis-2.6-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar" sourcepath="M2_REPO/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar" sourcepath="M2_REPO/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar" sourcepath="M2_REPO/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-test/5.0.12.RELEASE/spring-test-5.0.12.RELEASE.jar" sourcepath="M2_REPO/org/springframework/spring-test/5.0.12.RELEASE/spring-test-5.0.12.RELEASE-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/springframework/spring-test/5.0.12.RELEASE/spring-test-5.0.12.RELEASE-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/xmlunit/xmlunit-core/2.5.1/xmlunit-core-2.5.1.jar" sourcepath="M2_REPO/org/xmlunit/xmlunit-core/2.5.1/xmlunit-core-2.5.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/xmlunit/xmlunit-core/2.5.1/xmlunit-core-2.5.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/mockito/mockito-all/1.10.19/mockito-all-1.10.19.jar" sourcepath="M2_REPO/org/mockito/mockito-all/1.10.19/mockito-all-1.10.19-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/morihara_y/.m2/repository/org/mockito/mockito-all/1.10.19/mockito-all-1.10.19-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+</classpath>
