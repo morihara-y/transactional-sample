@@ -19,7 +19,7 @@ public class QuantityDaoImpl implements QuantityDao {
 
     private static final RowMapper<QuantityTrnDto> ROW_MAPPER = (rs, i) -> {
         return QuantityTrnDto.builder().quantityCode(rs.getString("quantity_code"))
-                .quantityCode(rs.getString("quantity")).build();
+                .quantity(rs.getBigDecimal("quantity")).build();
     };
 
     @Override
