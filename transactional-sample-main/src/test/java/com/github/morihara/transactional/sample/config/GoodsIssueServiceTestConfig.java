@@ -15,7 +15,9 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import com.github.morihara.transactional.sample.dao.GoodsIssueDao;
 import com.github.morihara.transactional.sample.dao.GoodsIssueDaoImpl;
 import com.github.morihara.transactional.sample.dao.QuantityDao;
+import com.github.morihara.transactional.sample.dao.QuantityDaoImpl;
 import com.github.morihara.transactional.sample.dao.QuantityHistoryDao;
+import com.github.morihara.transactional.sample.dao.QuantityHistoryDaoImpl;
 import com.github.morihara.transactional.sample.dto.GoodsIssueTrnDto;
 import com.github.morihara.transactional.sample.exception.TransactionalRuntimeException;
 import com.github.morihara.transactional.sample.service.GoodsIssueService;
@@ -25,7 +27,6 @@ import com.github.morihara.transactional.sample.service.UpdateQuantityServiceImp
 
 @Configuration
 @Import({
-        UpdateQuantityServiceTestConfig.class,
         JDBCTestConfig.class
 })
 public class GoodsIssueServiceTestConfig {
@@ -33,6 +34,18 @@ public class GoodsIssueServiceTestConfig {
     @Autowired
     public GoodsIssueDao goodsIssueDao(JdbcTemplate jdbc) {
         return new GoodsIssueDaoImpl(jdbc);
+    }
+
+    @Bean
+    @Autowired
+    public QuantityHistoryDao quantityHistoryDao(JdbcTemplate jdbc) {
+        return new QuantityHistoryDaoImpl(jdbc);
+    }
+
+    @Bean
+    @Autowired
+    public QuantityDao quantityDao(JdbcTemplate jdbc) {
+        return new QuantityDaoImpl(jdbc);
     }
 
     @Bean
