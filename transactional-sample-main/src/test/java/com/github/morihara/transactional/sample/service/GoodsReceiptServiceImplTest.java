@@ -15,7 +15,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.github.morihara.transactional.sample.config.GoodsReceiptServiceTestConfig;
-import com.github.morihara.transactional.sample.config.JDBCTestConfig;
 import com.github.morihara.transactional.sample.dao.GoodsReceiptDao;
 import com.github.morihara.transactional.sample.dto.GoodsReceiptTrnDto;
 
