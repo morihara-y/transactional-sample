@@ -3,11 +3,14 @@ package com.github.morihara.transactional.sample.service;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
+
 import java.math.BigDecimal;
 import java.util.List;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -20,26 +23,46 @@ import lombok.extern.slf4j.Slf4j;
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = { 
-        JDBCTestConfig.class,
         GoodsReceiptServiceTestConfig.class
 })
 @Slf4j
 public class GoodsReceiptServiceImplTest {
     @Autowired
     private GoodsReceiptDao goodsReceiptDao;
+
     @Autowired
-    private GoodsReceiptService mockedGoodsReceiptService;
+    @Qualifier("goodsReceiptServiceForRollback")
+    private GoodsReceiptService goodsReceiptServiceForRollback;
+    
+    @Autowired
+    @Qualifier("goodsReceiptServiceForCommit")
+    private GoodsReceiptService goodsReceiptServiceForCommit;
 
     @Test
     public void registerNewGoodsReceipt_rollbackTest() {
         List<GoodsReceiptTrnDto> expectedReceipts = goodsReceiptDao.getAll();
         try {
-            mockedGoodsReceiptService.registerNewGoodsReceipt("GOODS_RECEIPT", "rollback_test", BigDecimal.TEN);
+            goodsReceiptServiceForRollback.registerNewGoodsReceipt("GOODS_RECEIPT", "rollback_test", BigDecimal.TEN);
         } catch (RuntimeException e) {
-            log.info("Catch exception: {}", e);
+            log.info("Catch exception");
         }
         List<GoodsReceiptTrnDto> actualReceipts = goodsReceiptDao.getAll();
         assertEqualsReceipt(actualReceipts, expectedReceipts);
+    }
+    
+    @Test
+    public void registerNewGoodsReceipt_commitTest() {
+        List<GoodsReceiptTrnDto> expectedReceipts = goodsReceiptDao.getAll();
+        int expectedReceiptCount = expectedReceipts.size() + 1;
+        try {
+            goodsReceiptServiceForCommit.registerNewGoodsReceipt("GOODS_RECEIPT", "commit_test", BigDecimal.TEN);
+        } catch (RuntimeException e) {
+            log.error("Catch exception", e);
+            fail();
+        }
+        List<GoodsReceiptTrnDto> actualReceipts = goodsReceiptDao.getAll();
+        
+        assertThat(actualReceipts.size(), is(expectedReceiptCount));
     }
 
     private void assertEqualsReceipt(List<GoodsReceiptTrnDto> actual,
