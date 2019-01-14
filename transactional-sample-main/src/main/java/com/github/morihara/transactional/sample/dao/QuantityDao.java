@@ -8,5 +8,7 @@ public interface QuantityDao {
 
     void update(QuantityTrnDto dto);
 
+    void remove(String quantityCode);
+
     Optional<QuantityTrnDto> getQuantity(String quantityCode);
 }

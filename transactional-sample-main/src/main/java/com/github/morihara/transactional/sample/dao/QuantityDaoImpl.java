@@ -4,6 +4,8 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
+
+import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementSetter;
@@ -35,6 +37,12 @@ public class QuantityDaoImpl implements QuantityDao {
     }
 
     @Override
+    public void remove(String quantityCode) {
+        jdbc.update("delete from quantity_trn where quantity_code = ?",
+                quantityCode);
+    }
+
+    @Override
     public Optional<QuantityTrnDto> getQuantity(String quantityCode) {
         String sql = "select quantity_code, quantity from quantity_trn where quantity_code = ?";
         PreparedStatementSetter pss = new PreparedStatementSetter() {
@@ -44,7 +52,7 @@ public class QuantityDaoImpl implements QuantityDao {
             }
         };
         List<QuantityTrnDto> quantityTrns = jdbc.query(sql, pss, ROW_MAPPER);
-        if (quantityTrns.size() == 0) {
+        if (CollectionUtils.isEmpty(quantityTrns)) {
             return Optional.empty();
         }
         return Optional.of(quantityTrns.get(0));

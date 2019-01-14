@@ -29,9 +29,10 @@ public class UpdateQuantityServiceImpl implements UpdateQuantityService {
             GoodsReceiptTrnDto receiptDto) {
         BigDecimal changeQuantity = receiptDto.getQuantity();
         try {
+            QuantityTrnDto result = upsertQuantity(quantityCode, changeQuantity); 
             registerQuantityHistory(serviceCode, quantityCode, receiptDto.getGoodsReceiptTrnId(),
                     changeQuantity);
-            return upsertQuantity(quantityCode, changeQuantity);
+            return result;
         } catch (RuntimeException e) {
             log.error("Error occurred in update quantity");
             throw new TransactionalRuntimeException(e);
@@ -43,9 +44,10 @@ public class UpdateQuantityServiceImpl implements UpdateQuantityService {
             GoodsIssueTrnDto issueDto) {
         BigDecimal changeQuantity = BigDecimal.ZERO.subtract(issueDto.getQuantity());
         try {
+            QuantityTrnDto result = upsertQuantity(quantityCode, changeQuantity); 
             registerQuantityHistory(serviceCode, quantityCode, issueDto.getGoodsIssueTrnId(),
                     changeQuantity);
-            return upsertQuantity(quantityCode, changeQuantity);
+            return result;
         } catch (RuntimeException e) {
             log.error("Error occurred in update quantity");
             throw new TransactionalRuntimeException(e);
