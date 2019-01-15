@@ -19,7 +19,6 @@ import com.github.morihara.transactional.sample.dao.QuantityDaoImpl;
 import com.github.morihara.transactional.sample.dao.QuantityHistoryDao;
 import com.github.morihara.transactional.sample.dao.QuantityHistoryDaoImpl;
 import com.github.morihara.transactional.sample.dto.GoodsReceiptTrnDto;
-import com.github.morihara.transactional.sample.exception.TransactionalRuntimeException;
 import com.github.morihara.transactional.sample.service.GoodsReceiptService;
 import com.github.morihara.transactional.sample.service.GoodsReceiptServiceImpl;
 import com.github.morihara.transactional.sample.service.UpdateQuantityService;
@@ -58,7 +57,7 @@ public class GoodsReceiptServiceTestConfig {
     @Bean
     public UpdateQuantityService updateQuantityServiceForRollback() {
         UpdateQuantityService updateQuantityServiceMock = mock(UpdateQuantityService.class);
-        doThrow(new TransactionalRuntimeException()).when(updateQuantityServiceMock)
+        doThrow(new RuntimeException()).when(updateQuantityServiceMock)
                 .increaseQuantity(anyString(), anyString(), any(GoodsReceiptTrnDto.class));
         return updateQuantityServiceMock;
     }

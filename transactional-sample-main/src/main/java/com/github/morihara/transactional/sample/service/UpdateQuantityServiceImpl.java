@@ -12,14 +12,11 @@ import com.github.morihara.transactional.sample.dto.GoodsIssueTrnDto;
 import com.github.morihara.transactional.sample.dto.GoodsReceiptTrnDto;
 import com.github.morihara.transactional.sample.dto.QuantityHistoryTrnDto;
 import com.github.morihara.transactional.sample.dto.QuantityTrnDto;
-import com.github.morihara.transactional.sample.exception.TransactionalRuntimeException;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
 @Service
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 @Transactional
-@Slf4j
 public class UpdateQuantityServiceImpl implements UpdateQuantityService {
     private final QuantityHistoryDao quantityHistoryDao;
     private final QuantityDao quantityDao;
@@ -28,30 +25,20 @@ public class UpdateQuantityServiceImpl implements UpdateQuantityService {
     public QuantityTrnDto increaseQuantity(String serviceCode, String quantityCode,
             GoodsReceiptTrnDto receiptDto) {
         BigDecimal changeQuantity = receiptDto.getQuantity();
-        try {
-            QuantityTrnDto result = upsertQuantity(quantityCode, changeQuantity); 
-            registerQuantityHistory(serviceCode, quantityCode, receiptDto.getGoodsReceiptTrnId(),
-                    changeQuantity);
-            return result;
-        } catch (RuntimeException e) {
-            log.error("Error occurred in update quantity");
-            throw new TransactionalRuntimeException(e);
-        }
+        QuantityTrnDto result = upsertQuantity(quantityCode, changeQuantity);
+        registerQuantityHistory(serviceCode, quantityCode, receiptDto.getGoodsReceiptTrnId(),
+                changeQuantity);
+        return result;
     }
 
     @Override
     public QuantityTrnDto decreaseQuantity(String serviceCode, String quantityCode,
             GoodsIssueTrnDto issueDto) {
         BigDecimal changeQuantity = BigDecimal.ZERO.subtract(issueDto.getQuantity());
-        try {
-            QuantityTrnDto result = upsertQuantity(quantityCode, changeQuantity); 
-            registerQuantityHistory(serviceCode, quantityCode, issueDto.getGoodsIssueTrnId(),
-                    changeQuantity);
-            return result;
-        } catch (RuntimeException e) {
-            log.error("Error occurred in update quantity");
-            throw new TransactionalRuntimeException(e);
-        }
+        QuantityTrnDto result = upsertQuantity(quantityCode, changeQuantity);
+        registerQuantityHistory(serviceCode, quantityCode, issueDto.getGoodsIssueTrnId(),
+                changeQuantity);
+        return result;
     }
 
     private void registerQuantityHistory(String serviceCode, String quantityCode,

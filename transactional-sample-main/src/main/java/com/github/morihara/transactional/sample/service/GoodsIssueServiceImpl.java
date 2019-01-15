@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import com.github.morihara.transactional.sample.dao.GoodsIssueDao;
 import com.github.morihara.transactional.sample.dto.GoodsIssueTrnDto;
-import com.github.morihara.transactional.sample.exception.TransactionalRuntimeException;
 import lombok.RequiredArgsConstructor;
 
 @Service
@@ -23,11 +22,7 @@ public class GoodsIssueServiceImpl implements GoodsIssueService {
         UUID newGoodsIssueTrnId = UUID.randomUUID();
         GoodsIssueTrnDto issueDto = GoodsIssueTrnDto.builder()
                 .goodsIssueTrnId(newGoodsIssueTrnId).quantity(quantity).build();
-        try {
-            issueDao.insert(issueDto);
-            updateQuantityService.decreaseQuantity(serviceCode, quantityCode, issueDto);
-        } catch (RuntimeException e) {
-            throw new TransactionalRuntimeException(e);
-        }
+        issueDao.insert(issueDto);
+        updateQuantityService.decreaseQuantity(serviceCode, quantityCode, issueDto);
     }
 }

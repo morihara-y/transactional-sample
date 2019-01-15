@@ -17,7 +17,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.github.morihara.transactional.sample.config.GoodsIssueServiceTestConfig;
 import com.github.morihara.transactional.sample.dao.GoodsIssueDao;
 import com.github.morihara.transactional.sample.dto.GoodsIssueTrnDto;
-import com.github.morihara.transactional.sample.exception.TransactionalRuntimeException;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -43,7 +42,7 @@ public class GoodsIssueServiceImplTest {
         List<GoodsIssueTrnDto> expectedIssues = goodsIssueDao.getAll();
         try {
             goodsIssueServiceForRollback.registerNewGoodsIssue("GOODS_RECEIPT", "rollback_test", BigDecimal.TEN);
-        } catch (TransactionalRuntimeException e) {
+        } catch (RuntimeException e) {
             log.info("Catch exception");
         }
         List<GoodsIssueTrnDto> actualIssues = goodsIssueDao.getAll();
@@ -56,7 +55,7 @@ public class GoodsIssueServiceImplTest {
         int expectedIssueCount = expectedIssues.size() + 1;
         try {
             goodsIssueServiceForCommit.registerNewGoodsIssue("GOODS_RECEIPT", "commit_test", BigDecimal.TEN);
-        } catch (TransactionalRuntimeException e) {
+        } catch (RuntimeException e) {
             log.error("Catch exception", e);
             fail();
         }

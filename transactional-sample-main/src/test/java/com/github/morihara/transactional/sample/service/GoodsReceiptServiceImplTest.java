@@ -17,7 +17,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.github.morihara.transactional.sample.config.GoodsReceiptServiceTestConfig;
 import com.github.morihara.transactional.sample.dao.GoodsReceiptDao;
 import com.github.morihara.transactional.sample.dto.GoodsReceiptTrnDto;
-import com.github.morihara.transactional.sample.exception.TransactionalRuntimeException;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -43,7 +42,7 @@ public class GoodsReceiptServiceImplTest {
         List<GoodsReceiptTrnDto> expectedReceipts = goodsReceiptDao.getAll();
         try {
             goodsReceiptServiceForRollback.registerNewGoodsReceipt("GOODS_RECEIPT", "rollback_test", BigDecimal.TEN);
-        } catch (TransactionalRuntimeException e) {
+        } catch (RuntimeException e) {
             log.info("Catch exception");
         }
         List<GoodsReceiptTrnDto> actualReceipts = goodsReceiptDao.getAll();
@@ -56,7 +55,7 @@ public class GoodsReceiptServiceImplTest {
         int expectedReceiptCount = expectedReceipts.size() + 1;
         try {
             goodsReceiptServiceForCommit.registerNewGoodsReceipt("GOODS_RECEIPT", "commit_test", BigDecimal.TEN);
-        } catch (TransactionalRuntimeException e) {
+        } catch (RuntimeException e) {
             log.error("Catch exception", e);
             fail();
         }

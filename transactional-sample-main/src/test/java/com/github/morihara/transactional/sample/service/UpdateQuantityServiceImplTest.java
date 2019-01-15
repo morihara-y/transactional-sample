@@ -20,7 +20,6 @@ import com.github.morihara.transactional.sample.config.UpdateQuantityServiceTest
 import com.github.morihara.transactional.sample.dao.QuantityDao;
 import com.github.morihara.transactional.sample.dto.GoodsReceiptTrnDto;
 import com.github.morihara.transactional.sample.dto.QuantityTrnDto;
-import com.github.morihara.transactional.sample.exception.TransactionalRuntimeException;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -61,7 +60,7 @@ public class UpdateQuantityServiceImplTest {
                 .build();
         try {
             updateQuantityServiceForRollback.increaseQuantity("GOODS_RECEIPT", TEST_QUANTITY_CODE, receiptDto);
-        } catch (TransactionalRuntimeException e) {
+        } catch (RuntimeException e) {
             log.info("Catch Exception");
         }
         Optional<QuantityTrnDto> actual = quantityDao.getQuantity(TEST_QUANTITY_CODE);
@@ -82,7 +81,7 @@ public class UpdateQuantityServiceImplTest {
         BigDecimal expectedQuantity = BASE_QUANTITY.getQuantity().add(additionalQuantity);
         try {
             updateQuantityServiceForCommit.increaseQuantity("GOODS_RECEIPT", TEST_QUANTITY_CODE, receiptDto);
-        } catch (TransactionalRuntimeException e) {
+        } catch (RuntimeException e) {
             log.error("Catch Exception", e);
             fail();
         }
