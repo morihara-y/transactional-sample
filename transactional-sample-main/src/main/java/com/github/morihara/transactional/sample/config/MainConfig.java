@@ -1,11 +1,9 @@
 package com.github.morihara.transactional.sample.config;
 
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 @Configuration
-@ComponentScan({"com.github.morihara.transactional.sample.dao",
-        "com.github.morihara.transactional.sample.service",
-        "com.github.morihara.transactional.sample.executor"})
+@Import({ServiceConfig.class})
 public class MainConfig {
 }
